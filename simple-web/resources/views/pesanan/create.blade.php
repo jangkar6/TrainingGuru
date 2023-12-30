@@ -15,7 +15,7 @@
                             <select name="id_makanan" required class="form-control">
                             <option value="">Silahkan Pilih</option>    
                             @foreach($makanan as $row)
-                            <option value="">{{$row->nama_makanan}}</option>
+                            <option value="{{$row->id}}">{{$row->nama_makanan}}</option>
                             @endforeach
                         </select>
                         </div>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <label>Jumlah Pemesan</label>
-                            <input type="number" class="form-control mt-2" name="jumlah_pemesan">
+                            <input type="number" class="form-control mt-2" name="jumlah">
                         </div>
                         <div class="form-group mt-2">
                             <button type="submit" class="btn btn-success">Tambah</button>

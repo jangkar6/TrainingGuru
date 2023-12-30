@@ -14,6 +14,6 @@ class Pesanan extends Model
 
     public function makanan()
     {
-        return $this->belongTo('App\Models\Makanan','id_makanan');
+        return $this->belongsTo('App\Models\Makanan','id_makanan');
     }
 }

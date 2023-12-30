@@ -31,9 +31,9 @@
                                             {{method_field('DELETE')}}
                                             <button type="submit" class="btn btn-danger"
                                                 onclick="return confirm('Apakah kamu mau hapus?')">Hapus</button>
-                                            <a href="{{route('makanan.edit', $row->id)}}"
+                                            <a href="{{route('pesanan.edit', $row->id)}}"
                                                 class="btn btn-warning">Ubah</a>
-                                            <a href="{{route('makanan.show', $row->id)}}"
+                                            <a href="{{route('pesanan.show', $row->id)}}"
                                                 class="btn btn-info">Detail</a>
                                         </form>
                                     </td>

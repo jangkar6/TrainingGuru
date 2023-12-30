@@ -59,7 +59,7 @@ class MakananController extends Controller
     public function update(Request $request, $id)
     {
        $makanan=Makanan::find($id);
-       $data=$request->all;
+       $data=$request->all();
        $makanan->update($data);
        return redirect('/makanan');
     }

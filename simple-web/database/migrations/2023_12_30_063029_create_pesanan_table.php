@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('id_makanan')->unsigned();
             $table->string('nama_pemesan');
             $table->integer('jumlah');
-            $table->foreign('id_makanan')->on('makanan')->references('id')->onDelete('cascade')->onUpdate;
+            $table->foreign('id_makanan')->on('makanan')->references('id')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

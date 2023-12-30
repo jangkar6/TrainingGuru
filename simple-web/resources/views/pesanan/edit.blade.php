@@ -14,9 +14,9 @@
                         <div class="form-group">
                             <label>Nama Makanan</label>
                             <select name="id_makanan" required class="form-control">
-                            <option value="">Silahkan Pilih</option>    
+                            <option value="{{$pesanan->id_makanan}}">{{$pesanan->makanan->nama_makanan}}</option>    
                             @foreach($makanan as $row)
-                            <option value="">{{$row->nama_makanan}}</option>
+                            <option value="{{$row->id}}">{{$row->nama_makanan}}</option>
                             @endforeach
                         </select>
                         </div>

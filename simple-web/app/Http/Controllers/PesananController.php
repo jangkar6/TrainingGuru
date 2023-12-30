@@ -50,9 +50,11 @@ class PesananController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pesanan $pesanan)
+    public function edit($id)
     {
-        //
+        $pesanan=Pesanan::find($id);
+        $pesanan=Makanan::all();
+        return view('pesanan.edit',compact('pesanan','makanan'));
     }
 
     /**
