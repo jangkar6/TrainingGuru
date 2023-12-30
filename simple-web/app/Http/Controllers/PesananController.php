@@ -62,7 +62,11 @@ class PesananController extends Controller
      */
     public function update(Request $request, Pesanan $pesanan)
     {
-        //
+        $pesanan=Pesanan::find($id);
+        $data=$request->all();
+        $pesanan->update($data);
+        return redirect('/pesanan');
+       
     }
 
     /**
