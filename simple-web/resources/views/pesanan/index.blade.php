@@ -20,12 +20,12 @@
                                 <th>Action</th>
                             </thead>
                             <tbody>
-                                @foreach($makanan as $row)
+                                @foreach($pesanan as $row)
                                 <tr>
-                                    <td>{{$row->nama_makanan}}</td>
+                                    <td>{{$row->makanan->nama_makanan}}</td>
                                     <td>{{$row->nama_pemesan}}</td>
-                                    <td>
-
+                                    <td>{{$row->jumlah}}</td>
+                                     <td>
                                         <form action="{{route('makanan.destroy', $row->id)}}" method="post">
                                             @csrf
                                             {{method_field('DELETE')}}
