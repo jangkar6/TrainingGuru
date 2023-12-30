@@ -26,3 +26,5 @@ Route::get('/alamatsiswa',function(){
 
 });
 Route::resource('/makanan',App\Http\Controllers\MakananController::class);
+
+Route::resource('/mobil',App\Http\Controllers\MobilController::class);
