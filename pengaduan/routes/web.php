@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
+
+Route::view('tampilan','layouts.template');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/petugas', App\Http\Controllers\UserController::class);
+Route::resource ('/petugas', App\Http\Controllers\UserController::class);
+Route::resource ('/pengaduan', App\Http\Controllers\PengaduanController::class);
+Route::resource ('/tanggapan', App\Http\Controllers\TanggapanController::class);
+
 
